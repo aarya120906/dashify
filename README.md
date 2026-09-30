@@ -1,16 +1,70 @@
-# React + Vite
+# Dashify 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive startup management dashboard built with React and Vite.
 
-Currently, two official plugins are available:
+This project was created as a front-end development task, focusing on clean component structure, responsive layouts, visual accuracy, and interactive UI elements.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- Responsive navigation bar
+- Hero section with animated dashboard visuals
+- Employee analytics card
+- Analytics reports visualization
+- Team list section
+- Trusted companies logo marquee
+- Powerful features section
+- Customer testimonials
+- Interactive pricing section
+- Monthly / yearly pricing toggle
+- FAQ accordion
+- Call-to-action footer
+- Responsive design for desktop and mobile
+- CSS-based animations and visual effects
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- JavaScript
+- HTML5
+- CSS3
+- SVG
+- Git & GitHub
+- Vercel
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📁 Project Structure
+
+```text
+dashify/
+│
+├── public/
+│   └── Logo.png
+│
+├── src/
+│   ├── assets/
+│   │   ├── avatars/
+│   │   ├── logos/
+│   │   ├── analytics-report.png
+│   │   └── dashify-logo.png
+│   │
+│   ├── components/
+│   │   ├── AnalyticsReports.jsx
+│   │   ├── CustomerTestimonials.jsx
+│   │   ├── EmployeesCard.jsx
+│   │   ├── FAQ.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── PowerfulFeatures.jsx
+│   │   ├── Pricing.jsx
+│   │   ├── TeamList.jsx
+│   │   ├── TrustedCompanies.jsx
+│   │   └── ...
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+│
+├── package.json
+├── vite.config.js
+└── README.md
