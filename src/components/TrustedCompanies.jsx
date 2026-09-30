@@ -1,12 +1,11 @@
 import "./TrustedCompanies.css";
 
-import emfire from "../assets/logos/emfire.png";
-import anove from "../assets/logos/anove.png";
-import fls from "../assets/logos/fls.png";
-import genesis from "../assets/logos/genesis.png";
-import bxc from "../assets/logos/bxc.png";
-import twinar from "../assets/logos/twinar.png";
-
+import emfire from "../assets/Logos/emfire.png";
+import anove from "../assets/Logos/anove.png";
+import fls from "../assets/Logos/fls.png";
+import genesis from "../assets/Logos/genesis.png";
+import bxc from "../assets/Logos/bxc.png";
+import twinar from "../assets/Logos/twinar.png";
 function LogoItem({ children }) {
   return (
     <div className="trusted-logo">
