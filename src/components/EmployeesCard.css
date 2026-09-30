@@ -1,0 +1,251 @@
+/* =========================================
+   EMPLOYEES CARD
+========================================= */
+
+.employees-card {
+  position: absolute !important;
+
+  width: 300px;
+  height: 181px;
+
+  /*
+    HERO ke left side mein.
+    Card TeamList ke upar overlap karega.
+  */
+  left: 80px !important;
+  top: 550px !important;
+
+  background: #ffffff;
+
+  border: 1px solid #eff3fe;
+  border-radius: 16px;
+
+  box-sizing: border-box;
+
+  padding: 20px 22px;
+
+  /* Screenshot jaisa tilt */
+  transform: rotate(-10deg);
+
+  z-index: 20;
+
+  overflow: hidden;
+
+  box-shadow: 0 4px 15px rgba(30, 40, 80, 0.04);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.employees-header {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+.employees-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f1f4ff;
+
+  border-radius: 7px;
+
+  flex-shrink: 0;
+}
+
+
+.employees-header h3 {
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  font-weight: 500;
+
+  color: #111111;
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.employees-number {
+  position: absolute;
+
+  left: 25px;
+  bottom: 35px;
+
+  margin: 0;
+
+  font-size: 40px;
+  line-height: 44px;
+
+  font-weight: 500;
+
+  letter-spacing: -1.5px;
+
+  color: #20204f;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.employees-footer {
+  position: absolute;
+
+  left: 25px;
+  bottom: 15px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  white-space: nowrap;
+}
+
+
+.growth {
+  display: flex;
+  align-items: center;
+
+  gap: 3px;
+
+  font-size: 10px;
+  line-height: 14px;
+
+  font-weight: 500;
+
+  color: #18b935;
+}
+
+
+.arrow {
+  font-size: 18px;
+  line-height: 10px;
+}
+
+
+.period {
+  font-size: 10px;
+  line-height: 14px;
+
+  color: #a5a5a5;
+}
+
+
+/* =========================================
+   CHART
+========================================= */
+
+.employees-chart {
+  position: absolute;
+
+  width: 116px;
+  height: 88px;
+
+  right: 17px;
+  top: 27px;
+}
+
+
+.employees-chart svg {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1200px) {
+
+  .employees-card {
+    left: 60px !important;
+    top: 190px !important;
+  }
+
+}
+
+
+@media (max-width: 900px) {
+
+  .employees-card {
+    width: 280px;
+    height: 169px;
+
+    left: 40px !important;
+    top: 210px !important;
+  }
+
+  .employees-number {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .employees-chart {
+    width: 108px;
+    height: 82px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .employees-card {
+    width: 260px;
+    height: 157px;
+
+    left: 50% !important;
+    top: 430px !important;
+
+    transform: translateX(-50%) rotate(-10deg);
+  }
+
+  .employees-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .employees-header h3 {
+    font-size: 14px;
+  }
+
+  .employees-number {
+    left: 21px;
+    bottom: 30px;
+
+    font-size: 34px;
+    line-height: 38px;
+  }
+
+  .employees-footer {
+    left: 21px;
+    bottom: 12px;
+  }
+
+  .employees-chart {
+    width: 100px;
+    height: 76px;
+
+    right: 14px;
+    top: 25px;
+  }
+
+}

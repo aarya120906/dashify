@@ -1,0 +1,365 @@
+.customer-testimonials {
+  width: 100%;
+  height: 939px;
+
+  position: relative;
+
+  background: #fcfcfc;
+
+  box-sizing: border-box;
+
+  padding-top: 81px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.customer-testimonials > h2 {
+  margin: 0;
+
+  text-align: center;
+
+  color: #080808;
+
+  font-size: 48px;
+  line-height: 58px;
+
+  font-weight: 500;
+
+  letter-spacing: -2.2px;
+}
+
+
+/* =========================================
+   SLIDER AREA
+========================================= */
+
+.testimonial-slider {
+  position: absolute;
+
+  top: 188px;
+  left: 0;
+
+  width: 100%;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   MARQUEE
+========================================= */
+
+.testimonial-marquee {
+  width: 100%;
+
+  overflow: hidden;
+}
+
+.testimonial-marquee-bottom {
+  margin-top: 20px;
+}
+
+
+/* =========================================
+   MARQUEE TRACK
+========================================= */
+
+.testimonial-track {
+  display: flex;
+
+  gap: 20px;
+
+  width: max-content;
+
+  will-change: transform;
+}
+
+
+/* TOP ROW - LEFT */
+
+.testimonial-marquee-top .testimonial-track {
+  animation: testimonial-marquee-left 28s linear infinite;
+
+  transform: translateX(-113px);
+}
+
+
+/* BOTTOM ROW - RIGHT */
+
+.testimonial-marquee-bottom .testimonial-track {
+  animation: testimonial-marquee-right 28s linear infinite;
+
+  transform: translateX(-312px);
+}
+
+
+/* =========================================
+   MARQUEE ANIMATIONS
+========================================= */
+
+@keyframes testimonial-marquee-left {
+  from {
+    transform: translateX(-113px);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 10px));
+  }
+}
+
+
+@keyframes testimonial-marquee-right {
+  from {
+    transform: translateX(-312px);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 10px));
+  }
+}
+
+
+/* =========================================
+   PAUSE ON HOVER
+========================================= */
+
+.testimonial-marquee:hover .testimonial-track {
+  animation-play-state: paused;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.testimonial-card {
+  width: 542px;
+  height: 312px;
+
+  flex-shrink: 0;
+
+  box-sizing: border-box;
+
+  padding: 39px 39px 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe6f8;
+
+  border-radius: 15px;
+}
+
+
+/* =========================================
+   USER
+========================================= */
+
+.testimonial-user {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.testimonial-user img {
+  width: 60px;
+  height: 60px;
+
+  object-fit: cover;
+
+  border-radius: 9px;
+
+  display: block;
+}
+
+.testimonial-user-info h3 {
+  margin: 0 0 4px;
+
+  color: #414141;
+
+  font-size: 25px;
+  line-height: 30px;
+
+  font-weight: 500;
+
+  letter-spacing: -0.8px;
+}
+
+.testimonial-user-info span {
+  color: #8b8b8b;
+
+  font-size: 14px;
+  line-height: 20px;
+
+  font-weight: 400;
+}
+
+
+/* =========================================
+   REVIEW TEXT
+========================================= */
+
+.testimonial-text {
+  width: 100%;
+
+  margin: 22px 0 0;
+
+  color: #555555;
+
+  font-size: 18px;
+  line-height: 28px;
+
+  font-weight: 400;
+
+  letter-spacing: -0.2px;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.testimonial-divider {
+  width: 100%;
+  height: 1px;
+
+  margin-top: 21px;
+
+  background: #dedede;
+}
+
+
+/* =========================================
+   STARS
+========================================= */
+
+.testimonial-stars {
+  display: flex;
+
+  gap: 6px;
+
+  margin-top: 18px;
+}
+
+.testimonial-stars span {
+  color: #ffbd2f;
+
+  font-size: 23px;
+  line-height: 23px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+  .customer-testimonials {
+    height: auto;
+
+    min-height: 939px;
+
+    padding-bottom: 80px;
+  }
+
+  .testimonial-slider {
+    position: relative;
+
+    top: auto;
+
+    margin-top: 55px;
+
+    overflow: hidden;
+  }
+
+  .testimonial-marquee {
+    width: 100%;
+
+    overflow: hidden;
+  }
+
+  .testimonial-track {
+    width: max-content;
+
+    gap: 20px;
+  }
+
+  .testimonial-marquee-top .testimonial-track {
+    animation: testimonial-marquee-left-mobile 25s linear infinite;
+  }
+
+  .testimonial-marquee-bottom .testimonial-track {
+    animation: testimonial-marquee-right-mobile 25s linear infinite;
+  }
+
+  .testimonial-card {
+    width: 500px;
+  }
+}
+
+
+@keyframes testimonial-marquee-left-mobile {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 10px));
+  }
+}
+
+
+@keyframes testimonial-marquee-right-mobile {
+  from {
+    transform: translateX(calc(-50% - 10px));
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+
+@media (max-width: 600px) {
+  .customer-testimonials {
+    padding-top: 60px;
+  }
+
+  .customer-testimonials > h2 {
+    font-size: 34px;
+    line-height: 42px;
+  }
+
+  .testimonial-card {
+    width: 340px;
+    height: 330px;
+
+    padding: 28px;
+  }
+
+  .testimonial-user-info h3 {
+    font-size: 21px;
+  }
+
+  .testimonial-text {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-track {
+    animation: none !important;
+  }
+}

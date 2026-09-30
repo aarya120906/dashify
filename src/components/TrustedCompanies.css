@@ -1,0 +1,440 @@
+/* =========================================================
+   TRUSTED COMPANIES
+========================================================= */
+
+.trusted-companies {
+  width: 100%;
+  height: 503px;
+
+  position: relative;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+
+  padding-top: 82px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.trusted-companies h2 {
+  margin: 0;
+
+  text-align: center;
+
+  font-size: 30px;
+  line-height: 38px;
+
+  font-weight: 500;
+
+  letter-spacing: -1px;
+
+  color: #3f3f3f;
+}
+
+
+/* =========================================================
+   MARQUEE WINDOW
+========================================================= */
+
+.trusted-marquee {
+  position: absolute;
+
+  top: 168px;
+  left: 0;
+
+  width: 100%;
+  height: 255px;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+}
+
+
+/* =========================================================
+   MOVING TRACK
+========================================================= */
+
+.trusted-marquee-track {
+  display: flex;
+
+  align-items: center;
+
+  width: max-content;
+
+  gap: 20px;
+
+  animation: trustedLogoMove 28s linear infinite;
+
+  will-change: transform;
+}
+
+
+/* =========================================================
+   EACH LOGO
+========================================================= */
+
+.trusted-logo {
+  width: 300px;
+  height: 115px;
+
+  flex: 0 0 300px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+
+  border: none;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   IMAGE LOGOS
+========================================================= */
+
+.trusted-logo img {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  max-width: 220px;
+  max-height: 100px;
+}
+
+
+/* EMFIRE */
+
+.trusted-logo:nth-child(1) img,
+.trusted-logo:nth-child(9) img {
+  width: 180px;
+  max-height: 90px;
+}
+
+
+/* ANOVE */
+
+.trusted-logo:nth-child(2) img,
+.trusted-logo:nth-child(10) img {
+  width: 200px;
+  max-height: 100px;
+}
+
+
+/* FLS */
+
+.trusted-logo:nth-child(3) img,
+.trusted-logo:nth-child(11) img {
+  width: 200px;
+  max-height: 100px;
+}
+
+
+/* GENESIS */
+
+.trusted-logo:nth-child(4) img,
+.trusted-logo:nth-child(12) img {
+  width: 200px;
+  max-height: 100px;
+}
+
+
+/* BXC */
+
+.trusted-logo:nth-child(5) img,
+.trusted-logo:nth-child(13) img {
+  width: 200px;
+  max-height: 100px;
+}
+
+
+/* TWINAR */
+
+.trusted-logo:nth-child(6) img,
+.trusted-logo:nth-child(14) img {
+  width: 200px;
+  max-height: 100px;
+}
+
+
+/* =========================================================
+   PLAYEARNODE
+========================================================= */
+
+.playearnode {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+
+.playearnode-symbol {
+  position: relative;
+
+  width: 15px;
+  height: 27px;
+
+  display: block;
+}
+
+
+.playearnode-symbol::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 7px;
+  height: 27px;
+
+  background: #191919;
+
+  border-radius: 2px;
+
+  transform: skewY(-28deg);
+}
+
+
+.playearnode-symbol::after {
+  content: "";
+
+  position: absolute;
+
+  left: 7px;
+  top: 4px;
+
+  width: 7px;
+  height: 15px;
+
+  background: #191919;
+
+  border-radius: 2px;
+
+  transform: skewY(-28deg);
+}
+
+
+.playearnode-name {
+  color: #191919;
+
+  font-size: 20px;
+
+  line-height: 1;
+
+  font-weight: 600;
+
+  letter-spacing: -0.7px;
+}
+
+
+/* =========================================================
+   INFIBEAM
+========================================================= */
+
+.infibeam {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+
+.infibeam-symbol {
+  position: relative;
+
+  width: 48px;
+  height: 40px;
+}
+
+
+.infibeam-symbol::before {
+  content: "";
+
+  position: absolute;
+
+  left: 2px;
+  top: 5px;
+
+  width: 35px;
+  height: 26px;
+
+  border: 3px solid #191919;
+
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+
+  border-radius: 50%;
+
+  transform: rotate(10deg);
+}
+
+
+.infibeam-symbol::after {
+  content: "";
+
+  position: absolute;
+
+  left: 22px;
+  top: 1px;
+
+  width: 5px;
+  height: 40px;
+
+  background: #191919;
+
+  border-radius: 5px;
+
+  transform: rotate(40deg);
+}
+
+
+.infibeam-name {
+  display: flex;
+
+  flex-direction: column;
+
+  color: #191919;
+
+  line-height: 17px;
+}
+
+
+.infibeam-name span {
+  font-size: 17px;
+
+  font-weight: 500;
+
+  letter-spacing: -0.3px;
+}
+
+
+/* =========================================================
+   MARQUEE ANIMATION
+========================================================= */
+
+@keyframes trustedLogoMove {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 10px));
+  }
+
+}
+
+
+/* =========================================================
+   HOVER - PAUSE
+========================================================= */
+
+.trusted-marquee:hover .trusted-marquee-track {
+  animation-play-state: paused;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media screen and (max-width: 600px) {
+
+  .trusted-companies {
+    height: 330px;
+
+    padding-top: 60px;
+
+    overflow: hidden;
+  }
+
+
+  .trusted-companies h2 {
+    width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    font-size: 24px;
+
+    line-height: 31px;
+
+    letter-spacing: -0.8px;
+  }
+
+
+  .trusted-marquee {
+    top: 145px;
+
+    height: 130px;
+  }
+
+
+  .trusted-marquee-track {
+    gap: 10px;
+
+    animation-duration: 22s;
+  }
+
+
+  .trusted-logo {
+    width: 190px;
+    height: 110px;
+
+    flex: 0 0 190px;
+  }
+
+
+  .trusted-logo img {
+    max-width: 150px;
+    max-height: 70px;
+  }
+
+
+  .playearnode-name {
+    font-size: 17px;
+  }
+
+
+  .infibeam-name span {
+    font-size: 15px;
+  }
+
+
+  .infibeam-symbol {
+    transform: scale(0.85);
+    transform-origin: center;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .trusted-marquee-track {
+    animation: none;
+  }
+
+}

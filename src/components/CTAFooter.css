@@ -1,0 +1,582 @@
+/* =========================================
+   MAIN FOOTER
+========================================= */
+
+.cta-footer {
+  position: relative;
+
+  width: 100%;
+  height: 685px;
+
+  box-sizing: border-box;
+
+  background: #020202;
+
+  color: #ffffff;
+
+  overflow: hidden;
+
+  font-family: inherit;
+}
+
+
+/* =========================================
+   BACKGROUND GRID
+========================================= */
+
+.footer-grid {
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(91, 81, 232, 0.13) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(91, 81, 232, 0.13) 1px,
+      transparent 1px
+    );
+
+  background-size: 110px 110px;
+
+  pointer-events: none;
+
+  opacity: 0.7;
+}
+
+
+/* =========================================
+   CTA CARD
+========================================= */
+
+.cta-card {
+  position: absolute;
+
+  z-index: 2;
+
+  top: 80px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 1064px;
+  height: 263px;
+
+  box-sizing: border-box;
+
+  border-radius: 16px;
+
+  padding: 0 80px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  background: linear-gradient(
+    135deg,
+    #5b51d9 0%,
+    #5e54df 50%,
+    #594fe0 100%
+  );
+
+  overflow: hidden;
+}
+
+
+/* subtle card grid */
+
+.cta-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 1px
+    );
+
+  background-size: 55px 55px;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   CTA CONTENT
+========================================= */
+
+.cta-content {
+  position: relative;
+
+  z-index: 2;
+}
+
+.cta-content h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 48px;
+  line-height: 58px;
+
+  font-weight: 500;
+
+  letter-spacing: -2.2px;
+}
+
+.cta-content p {
+  margin: 17px 0 0;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 18px;
+  line-height: 26px;
+
+  font-weight: 400;
+}
+
+
+/* =========================================
+   CTA BUTTON
+========================================= */
+
+.cta-button {
+  position: relative;
+
+  z-index: 2;
+
+  width: 133px;
+  height: 49px;
+
+  border: none;
+
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  color: #5a50e4;
+
+  font-family: inherit;
+
+  font-size: 15px;
+  line-height: 20px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   FOOTER MAIN
+========================================= */
+
+.footer-main {
+  position: absolute;
+
+  z-index: 2;
+
+  left: 188px;
+  right: 188px;
+
+  top: 423px;
+
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.footer-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 35px;
+}
+
+
+/* =========================================
+   LOGO MARK
+========================================= */
+
+.footer-logo-mark {
+  position: relative;
+
+  width: 118px;
+  height: 138px;
+
+  flex-shrink: 0;
+}
+
+
+/* vertical shape */
+
+.logo-vertical {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 50px;
+  height: 138px;
+
+  border-radius: 0 0 0 42px;
+
+  background: #5b51df;
+}
+
+
+/* horizontal shape */
+
+.logo-horizontal {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 118px;
+  height: 50px;
+
+  border-radius: 0 0 42px 42px;
+
+  background: #4b42b8;
+}
+
+
+/* inner overlap */
+
+.logo-horizontal::before {
+  content: "";
+
+  position: absolute;
+
+  left: 50px;
+  top: 0;
+
+  width: 35px;
+  height: 50px;
+
+  background: #5147ca;
+
+  border-radius: 0 0 18px 0;
+}
+
+
+/* =========================================
+   DASHIFY TEXT
+========================================= */
+
+.footer-logo-text {
+  display: flex;
+
+  align-items: baseline;
+
+  color: #ffffff;
+
+  font-size: 100px;
+  line-height: 1;
+
+  font-weight: 500;
+
+  letter-spacing: -5px;
+}
+
+.dashify-purple {
+  color: #5b51df;
+}
+
+
+/* =========================================
+   FOOTER LINKS
+========================================= */
+
+.footer-links {
+  padding-top: 37px;
+
+  min-width: 371px;
+}
+
+.footer-link-row {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 38px;
+}
+
+.footer-link-row a {
+  color: #a9a9a9;
+
+  text-decoration: none;
+
+  font-size: 15px;
+  line-height: 20px;
+
+  font-weight: 400;
+
+  white-space: nowrap;
+
+  transition: color 0.2s ease;
+}
+
+.footer-link-row a:hover {
+  color: #ffffff;
+}
+
+
+/* legal row */
+
+.footer-legal {
+  justify-content: flex-start;
+
+  margin-top: 30px;
+
+  gap: 48px;
+}
+
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.footer-bottom {
+  position: absolute;
+
+  z-index: 2;
+
+  left: 188px;
+  right: 188px;
+
+  bottom: 26px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  color: #999999;
+
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.social-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 28px;
+}
+
+.social-links a {
+  color: #999999;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  line-height: 20px;
+
+  transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1200px) {
+  .cta-card {
+    width: calc(100% - 80px);
+  }
+
+  .footer-main,
+  .footer-bottom {
+    left: 60px;
+    right: 60px;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .cta-footer {
+    height: auto;
+
+    min-height: 685px;
+
+    padding-bottom: 40px;
+  }
+
+  .cta-card {
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    transform: none;
+
+    width: calc(100% - 40px);
+
+    height: auto;
+
+    min-height: 230px;
+
+    margin: 40px auto 0;
+
+    padding: 45px;
+
+    gap: 30px;
+  }
+
+  .cta-content h2 {
+    font-size: 38px;
+    line-height: 45px;
+  }
+
+  .footer-main {
+    position: relative;
+
+    top: auto;
+    left: auto;
+    right: auto;
+
+    margin: 75px 40px 0;
+
+    flex-direction: column;
+
+    gap: 50px;
+  }
+
+  .footer-bottom {
+    position: relative;
+
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+    margin: 70px 40px 0;
+
+    gap: 25px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .cta-card {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 35px 30px;
+  }
+
+  .cta-content h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .cta-content p {
+    font-size: 16px;
+  }
+
+  .footer-brand {
+    gap: 20px;
+  }
+
+  .footer-logo-mark {
+    width: 70px;
+    height: 85px;
+  }
+
+  .logo-vertical {
+    width: 32px;
+    height: 85px;
+
+    border-radius: 0 0 0 25px;
+  }
+
+  .logo-horizontal {
+    width: 70px;
+    height: 32px;
+
+    border-radius: 0 0 25px 25px;
+  }
+
+  .logo-horizontal::before {
+    left: 32px;
+
+    width: 22px;
+    height: 32px;
+  }
+
+  .footer-logo-text {
+    font-size: 55px;
+
+    letter-spacing: -3px;
+  }
+
+  .footer-links {
+    min-width: 0;
+
+    width: 100%;
+  }
+
+  .footer-link-row {
+    flex-wrap: wrap;
+
+    justify-content: flex-start;
+
+    gap: 20px 30px;
+  }
+
+  .footer-legal {
+    margin-top: 25px;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+
+    gap: 15px 25px;
+  }
+}

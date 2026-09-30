@@ -1,0 +1,1984 @@
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #111111;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* =========================================================
+   HOME PAGE
+========================================================= */
+
+.home-page {
+  width: 1440px;
+  min-height: 910px;
+
+  position: relative;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  width: 1065px;
+  height: 80px;
+
+  position: absolute;
+
+  top: 30px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 24px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #f6f6f6;
+
+  border-radius: 16px;
+
+  z-index: 1000;
+}
+
+
+/* =========================================================
+   DASHIFY LOGO
+========================================================= */
+
+.dashify-logo {
+  width: 153px;
+  height: 40.77px;
+
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 0;
+}
+
+.dashify-logo img {
+  width: 153px;
+  height: 40.77px;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   NAVIGATION LINKS
+========================================================= */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+
+  gap: 28px;
+
+  margin-left: auto;
+  margin-right: 48px;
+}
+
+.nav-links a {
+  color: #444444;
+
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+
+  white-space: nowrap;
+
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #5b4bd8;
+}
+
+
+/* =========================================================
+   NAVBAR BUTTONS
+========================================================= */
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+========================================================= */
+
+.login-btn {
+  width: 92px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #5b4bd8;
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  color: #5b4bd8;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.login-btn:hover {
+  background: #5b4bd8;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   GET STARTED BUTTON
+========================================================= */
+
+.get-started-btn {
+  width: 164px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  border: 1px solid #5b4bd8;
+  border-radius: 15px;
+
+  background: #5b4bd8;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.get-started-btn:hover {
+  background: #4d3fc7;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.arrow {
+  font-size: 22px;
+  line-height: 1;
+
+  margin-top: -2px;
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.mobile-menu-btn {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 0;
+
+  border: 1px solid #e2e2e2;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.mobile-menu-btn span {
+  display: block;
+
+  width: 18px;
+  height: 2px;
+
+  border-radius: 2px;
+
+  background: #111111;
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.mobile-menu {
+  display: none;
+
+  position: absolute;
+
+  top: calc(100% + 10px);
+  left: 0;
+
+  width: 100%;
+
+  padding: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 16px;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+
+  z-index: 999;
+}
+
+.mobile-menu-links {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0;
+}
+
+.mobile-menu-links a {
+  width: 100%;
+
+  padding: 15px 5px;
+
+  border-bottom: 1px solid #f1f1f1;
+
+  color: #333333;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  line-height: 20px;
+}
+
+.mobile-menu-buttons {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 18px;
+}
+
+.mobile-menu-buttons .login-btn,
+.mobile-menu-buttons .get-started-btn {
+  flex: 1;
+
+  width: auto;
+
+  height: 44px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  position: relative;
+
+  width: 1440px;
+  height: 910px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   HERO MAIN CONTENT
+========================================================= */
+
+.hero-content {
+  width: 597px;
+  height: 542px;
+
+  position: absolute;
+
+  top: 239px;
+  left: 422px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  z-index: 5;
+}
+
+
+/* =========================================================
+   HERO HEADING
+========================================================= */
+
+.hero-content h1 {
+  width: 597px;
+
+  margin: 0;
+
+  color: #000000;
+
+  font-size: 78px;
+
+  font-weight: 500;
+
+  line-height: 1.08;
+
+  letter-spacing: -4px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.hero-content p {
+  width: 597px;
+
+  margin: 24px 0 0;
+
+  color: #333333;
+
+  font-size: 17px;
+
+  font-weight: 400;
+
+  line-height: 1.7;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.hero-buttons {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  margin-top: 48px;
+}
+
+.hero-primary-btn {
+  width: 164px;
+  height: 49px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  border: none;
+
+  border-radius: 15px;
+
+  background: #5b4bd8;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 500;
+}
+
+.hero-primary-btn span {
+  font-size: 22px;
+}
+
+.hero-secondary-btn {
+  width: 132px;
+  height: 49px;
+
+  border: none;
+
+  border-radius: 15px;
+
+  background: #e5eaff;
+
+  color: #5b4bd8;
+
+  font-size: 15px;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   HERO USERS
+========================================================= */
+
+.hero-users {
+  margin-top: 88px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.user-avatars {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+
+  margin-left: -7px;
+
+  border: 2px solid #ffffff;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  background: #dddddd;
+}
+
+.avatar:first-child {
+  margin-left: 0;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.add-user {
+  width: 40px;
+  height: 40px;
+
+  margin-left: -3px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid #ffffff;
+
+  border-radius: 50%;
+
+  background: #5b4bd8;
+
+  color: #ffffff;
+
+  font-size: 27px;
+
+  font-weight: 300;
+}
+
+.users-text {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  margin-top: 10px;
+}
+
+.users-text strong {
+  color: #111111;
+
+  font-size: 17px;
+
+  font-weight: 600;
+}
+
+.users-text span {
+  color: #5d5d5d;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   TEAM LIST CARD
+========================================================= */
+
+.team-list-card {
+  width: 320px;
+  height: 277px;
+
+  position: absolute;
+
+  top: 145.08px;
+  left: 47.28px;
+
+  transform: rotate(8deg);
+
+  box-sizing: border-box;
+
+  padding: 25px 20px;
+
+  border-radius: 26px;
+
+  background: rgba(255, 255, 255, 0.78);
+
+  backdrop-filter: blur(24px);
+
+  -webkit-backdrop-filter: blur(24px);
+
+  border: 1px solid rgba(255, 255, 255, 0.95);
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   TEAM MEMBER
+========================================================= */
+
+.team-member {
+  width: 100%;
+  height: 47px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.team-member:last-child {
+  border-bottom: none;
+}
+
+
+/* =========================================================
+   MEMBER INFO
+========================================================= */
+
+.member-info {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.member-info img {
+  width: 32px;
+  height: 32px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+}
+
+.member-info span {
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  line-height: 20px;
+
+  color: #3f3f3f;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   DEPARTMENT TAG
+========================================================= */
+
+.department {
+  padding: 7px 9px;
+
+  border-radius: 6px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 400;
+
+  line-height: 14px;
+
+  white-space: nowrap;
+}
+
+.marketing {
+  background: #edf1fb;
+  color: #4f4f4f;
+}
+
+.design {
+  background: #fff7df;
+  color: #4f4f4f;
+}
+
+.finance {
+  background: #e9f8fa;
+  color: #4f4f4f;
+}
+
+.development {
+  background: #fceceb;
+  color: #4f4f4f;
+}
+
+
+/* =========================================================
+   EMPLOYEES CARD
+========================================================= */
+
+.employees-card {
+  position: absolute;
+
+  width: 300px;
+  height: 181px;
+
+  top: 300px;
+  left: 80px;
+
+  transform: rotate(-10deg);
+
+  background: #ffffff;
+
+  border: 1px solid #eff3fe;
+
+  border-radius: 16px;
+
+  box-sizing: border-box;
+
+  padding: 20px 22px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  overflow: hidden;
+
+  box-shadow: 0 4px 15px rgba(30, 40, 80, 0.04);
+
+  z-index: 20;
+}
+
+
+/* =========================================================
+   EMPLOYEES HEADER
+========================================================= */
+
+.employees-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.employees-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #f1f4ff;
+
+  border-radius: 7px;
+
+  flex-shrink: 0;
+}
+
+.employees-header h3 {
+  margin: 0;
+
+  font-size: 16px;
+
+  line-height: 20px;
+
+  font-weight: 500;
+
+  color: #111111;
+}
+
+
+/* =========================================================
+   EMPLOYEES NUMBER
+========================================================= */
+
+.employees-number {
+  position: absolute;
+
+  left: 25px;
+
+  bottom: 35px;
+
+  font-size: 40px;
+
+  line-height: 44px;
+
+  font-weight: 500;
+
+  letter-spacing: -1.5px;
+
+  color: #20204f;
+}
+
+
+/* =========================================================
+   EMPLOYEES FOOTER
+========================================================= */
+
+.employees-footer {
+  position: absolute;
+
+  left: 25px;
+
+  bottom: 15px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  white-space: nowrap;
+}
+
+.growth {
+  display: flex;
+
+  align-items: center;
+
+  gap: 3px;
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  color: #18b935;
+}
+
+.period {
+  font-size: 10px;
+
+  color: #a5a5a5;
+}
+
+
+/* =========================================================
+   EMPLOYEES CHART
+========================================================= */
+
+.employees-chart {
+  position: absolute;
+
+  width: 116px;
+  height: 88px;
+
+  right: 17px;
+  top: 27px;
+}
+
+.employees-chart svg {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .home-page {
+    width: 100%;
+  }
+
+  .hero {
+    width: 100%;
+  }
+
+  .navbar {
+    width: calc(100% - 40px);
+  }
+
+  .nav-links {
+    gap: 18px;
+
+    margin-right: 25px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .hero-content {
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .navbar {
+    width: calc(100% - 32px);
+  }
+
+  .hero-content {
+    width: calc(100% - 80px);
+
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
+
+  .hero-content h1,
+  .hero-content p {
+    width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 64px;
+
+    letter-spacing: -3px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  /* -------------------------------------------------------
+     PAGE
+  ------------------------------------------------------- */
+
+  .home-page {
+    width: 100%;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+  }
+
+
+  /* -------------------------------------------------------
+     NAVBAR
+  ------------------------------------------------------- */
+
+  .navbar {
+    width: calc(100% - 24px);
+
+    height: 64px;
+
+    top: 15px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    padding: 0 12px;
+
+    border-radius: 14px;
+
+    z-index: 1000;
+  }
+
+  .dashify-logo {
+    width: 120px;
+
+    height: 32px;
+
+    position: static;
+  }
+
+  .dashify-logo img {
+    width: 120px;
+
+    height: 32px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-buttons {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+
+    margin-left: auto;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+
+  /* -------------------------------------------------------
+     HERO
+  ------------------------------------------------------- */
+
+  .hero {
+    width: 100%;
+
+    height: 850px;
+
+    min-height: 850px;
+
+    overflow: hidden;
+  }
+
+
+  /* -------------------------------------------------------
+     HERO CONTENT
+  ------------------------------------------------------- */
+
+  .hero-content {
+    width: calc(100% - 40px);
+
+    height: auto;
+
+    position: absolute;
+
+    top: 150px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+  }
+
+  .hero-content h1 {
+    width: 100%;
+
+    font-size: 48px;
+
+    line-height: 1.08;
+
+    letter-spacing: -2.5px;
+  }
+
+  .hero-content p {
+    width: 100%;
+
+    margin-top: 18px;
+
+    font-size: 15px;
+
+    line-height: 24px;
+  }
+
+
+  /* -------------------------------------------------------
+     HERO BUTTONS
+  ------------------------------------------------------- */
+
+  .hero-buttons {
+    width: 100%;
+
+    margin-top: 30px;
+
+    gap: 10px;
+  }
+
+  .hero-primary-btn {
+    width: 150px;
+
+    height: 46px;
+
+    border-radius: 13px;
+
+    font-size: 14px;
+  }
+
+  .hero-secondary-btn {
+    width: 120px;
+
+    height: 46px;
+
+    border-radius: 13px;
+
+    font-size: 14px;
+  }
+
+
+  /* -------------------------------------------------------
+     HERO USERS
+  ------------------------------------------------------- */
+
+  .hero-users {
+    margin-top: 50px;
+  }
+
+  .avatar {
+    width: 36px;
+
+    height: 36px;
+  }
+
+  .add-user {
+    width: 36px;
+
+    height: 36px;
+
+    font-size: 23px;
+  }
+
+  .users-text {
+    margin-top: 8px;
+
+    gap: 5px;
+  }
+
+  .users-text strong {
+    font-size: 15px;
+  }
+
+  .users-text span {
+    font-size: 12px;
+  }
+
+
+  /* -------------------------------------------------------
+     TEAM LIST CARD
+  ------------------------------------------------------- */
+
+  .team-list-card {
+    width: 285px;
+
+    height: 245px;
+
+    top: 370px;
+
+    left: 50%;
+
+    transform: translateX(-50%) rotate(4deg);
+
+    padding: 20px 16px;
+
+    border-radius: 22px;
+  }
+
+  .team-member {
+    height: 41px;
+  }
+
+  .member-info {
+    gap: 7px;
+  }
+
+  .member-info img {
+    width: 28px;
+
+    height: 28px;
+
+    border-radius: 7px;
+  }
+
+  .member-info span {
+    font-size: 12px;
+  }
+
+  .department {
+    padding: 5px 7px;
+
+    font-size: 9px;
+
+    line-height: 12px;
+  }
+
+
+  /* -------------------------------------------------------
+     EMPLOYEES CARD
+  ------------------------------------------------------- */
+
+  .employees-card {
+    width: 260px;
+
+    height: 158px;
+
+    top: 610px;
+
+    left: 50%;
+
+    transform: translateX(-50%) rotate(-7deg);
+
+    padding: 16px 18px;
+
+    border-radius: 15px;
+  }
+
+  .employees-icon {
+    width: 34px;
+
+    height: 34px;
+  }
+
+  .employees-header h3 {
+    font-size: 14px;
+  }
+
+  .employees-number {
+    left: 19px;
+
+    bottom: 29px;
+
+    font-size: 34px;
+
+    line-height: 38px;
+  }
+
+  .employees-footer {
+    left: 19px;
+
+    bottom: 12px;
+
+    gap: 6px;
+  }
+
+  .growth,
+  .period {
+    font-size: 9px;
+  }
+
+  .employees-chart {
+    width: 100px;
+
+    height: 72px;
+
+    right: 14px;
+
+    top: 25px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .navbar {
+    width: calc(100% - 18px);
+
+    padding: 0 10px;
+  }
+
+  .dashify-logo,
+  .dashify-logo img {
+    width: 108px;
+
+    height: auto;
+  }
+
+  .mobile-menu-btn {
+    width: 39px;
+
+    height: 39px;
+  }
+
+  .hero-content {
+    width: calc(100% - 30px);
+
+    top: 145px;
+  }
+
+  .hero-content h1 {
+    font-size: 43px;
+
+    letter-spacing: -2.2px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+
+    line-height: 22px;
+  }
+
+  .team-list-card {
+    width: 270px;
+  }
+
+  .employees-card {
+    width: 245px;
+  }
+}
+/* =========================================================
+   MOBILE HERO FIX - iPHONE 16
+========================================================= */
+
+@media screen and (max-width: 600px) {
+
+  /* MAIN PAGE */
+  .home-page {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  /* HERO */
+  .hero {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 760px !important;
+
+    position: relative !important;
+    overflow: hidden !important;
+
+    margin: 0 !important;
+    padding: 105px 20px 60px !important;
+
+    box-sizing: border-box !important;
+  }
+
+  /* HERO CONTENT */
+  .hero-content {
+    width: 100% !important;
+    max-width: 353px !important;
+    height: auto !important;
+
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+
+    text-align: center !important;
+
+    transform: none !important;
+  }
+
+  /* HEADING */
+  .hero-content h1 {
+    width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    font-size: 42px !important;
+    line-height: 46px !important;
+    letter-spacing: -2.2px !important;
+
+    text-align: center !important;
+
+    white-space: normal !important;
+  }
+
+  /* DESCRIPTION */
+  .hero-content p {
+    width: 100% !important;
+    max-width: 345px !important;
+
+    margin: 22px auto 0 !important;
+    padding: 0 !important;
+
+    font-size: 15px !important;
+    line-height: 23px !important;
+
+    text-align: center !important;
+  }
+
+  /* BUTTONS */
+  .hero-buttons {
+    width: 100% !important;
+
+    margin: 29px 0 0 !important;
+
+    display: flex !important;
+    flex-direction: row !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 10px !important;
+  }
+
+  .hero-primary-btn {
+    width: 145px !important;
+    height: 46px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    border-radius: 13px !important;
+
+    font-size: 14px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 8px !important;
+  }
+
+  .hero-primary-btn span {
+    font-size: 19px !important;
+  }
+
+  .hero-secondary-btn {
+    width: 120px !important;
+    height: 46px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    border-radius: 13px !important;
+
+    font-size: 14px !important;
+  }
+
+  /* USERS */
+  .hero-users {
+    width: 100% !important;
+
+    margin: 38px 0 0 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .user-avatars {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    height: 40px !important;
+  }
+
+  .avatar {
+    width: 38px !important;
+    height: 38px !important;
+
+    margin-left: -7px !important;
+
+    flex-shrink: 0 !important;
+
+    border-radius: 50% !important;
+  }
+
+  .avatar:first-child {
+    margin-left: 0 !important;
+  }
+
+  .add-user {
+    width: 38px !important;
+    height: 38px !important;
+
+    margin-left: -3px !important;
+
+    flex-shrink: 0 !important;
+
+    border-radius: 50% !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    font-size: 22px !important;
+  }
+
+  .users-text {
+    margin-top: 9px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 5px !important;
+  }
+
+  .users-text strong {
+    font-size: 15px !important;
+  }
+
+  .users-text span {
+    font-size: 13px !important;
+  }
+
+
+  /* =====================================================
+     HIDE DESKTOP FLOATING HERO CARDS
+  ===================================================== */
+
+  .hero > .employees-card {
+    display: none !important;
+  }
+
+  .hero > .analytics-reports {
+    display: none !important;
+  }
+
+  /* If AnalyticsReports uses another root class */
+  .hero .analytics-report {
+    display: none !important;
+  }
+
+  .hero .analytics-card {
+    display: none !important;
+  }
+}
+
+
+/* SMALL PHONES */
+@media screen and (max-width: 380px) {
+
+  .hero {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    padding-top: 100px !important;
+  }
+
+  .hero-content h1 {
+    font-size: 39px !important;
+    line-height: 43px !important;
+  }
+
+  .hero-content p {
+    font-size: 14px !important;
+    line-height: 22px !important;
+  }
+
+  .hero-primary-btn {
+    width: 140px !important;
+  }
+
+  .hero-secondary-btn {
+    width: 115px !important;
+  }
+}
+/* =========================================================
+   TEAM LIST - MOBILE
+========================================================= */
+
+@media screen and (max-width: 600px) {
+
+  .team-list-card {
+    position: relative !important;
+
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+
+    transform: none !important;
+
+    width: calc(100% - 40px) !important;
+    max-width: 353px !important;
+
+    height: auto !important;
+    min-height: 260px !important;
+
+    margin: 25px auto 0 !important;
+    padding: 22px 20px !important;
+
+    box-sizing: border-box !important;
+
+    border-radius: 18px !important;
+
+    z-index: 2 !important;
+
+    overflow: hidden !important;
+  }
+
+
+  /* TITLE */
+  .team-list-card h3 {
+    margin: 0 0 18px !important;
+
+    font-size: 22px !important;
+    line-height: 28px !important;
+  }
+
+
+  /* EACH MEMBER */
+  .team-member {
+    width: 100% !important;
+
+    min-height: 45px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    gap: 10px !important;
+  }
+
+
+  /* LEFT SIDE */
+  .member-info {
+    min-width: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 10px !important;
+  }
+
+
+  .member-info img {
+    width: 34px !important;
+    height: 34px !important;
+
+    flex-shrink: 0 !important;
+
+    border-radius: 50% !important;
+  }
+
+
+  .member-info span {
+    font-size: 13px !important;
+    line-height: 18px !important;
+
+    white-space: nowrap !important;
+  }
+
+
+  /* DEPARTMENT */
+  .department {
+    flex-shrink: 0 !important;
+
+    font-size: 10px !important;
+    line-height: 16px !important;
+
+    padding: 3px 8px !important;
+
+    border-radius: 6px !important;
+  }
+}
+/* =========================================================
+   MOBILE RESPONSIVE - HERO + TEAM LIST
+========================================================= */
+
+@media screen and (max-width: 600px) {
+
+  /* PAGE */
+  .home-page {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  /* HERO */
+  .hero {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 900px !important;
+    min-height: 900px !important;
+
+    position: relative !important;
+
+    margin: 0 !important;
+    padding: 105px 20px 60px !important;
+
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  /* HERO CONTENT */
+  .hero-content {
+    width: 100% !important;
+    max-width: 353px !important;
+
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+
+    text-align: center !important;
+
+    transform: none !important;
+  }
+
+  /* HEADING */
+  .hero-content h1 {
+    width: 100% !important;
+
+    margin: 0 !important;
+
+    font-size: 42px !important;
+    line-height: 46px !important;
+    letter-spacing: -2.2px !important;
+
+    text-align: center !important;
+  }
+
+  /* DESCRIPTION */
+  .hero-content p {
+    width: 100% !important;
+    max-width: 345px !important;
+
+    margin: 22px auto 0 !important;
+
+    font-size: 15px !important;
+    line-height: 23px !important;
+
+    text-align: center !important;
+  }
+
+  /* BUTTONS */
+  .hero-buttons {
+    width: 100% !important;
+
+    margin-top: 29px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 10px !important;
+  }
+
+  .hero-primary-btn {
+    width: 145px !important;
+    height: 46px !important;
+
+    padding: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 13px !important;
+    font-size: 14px !important;
+  }
+
+  .hero-secondary-btn {
+    width: 120px !important;
+    height: 46px !important;
+
+    padding: 0 !important;
+
+    border-radius: 13px !important;
+    font-size: 14px !important;
+  }
+
+  /* USERS */
+  .hero-users {
+    width: 100% !important;
+
+    margin-top: 38px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .user-avatars {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .avatar {
+    width: 38px !important;
+    height: 38px !important;
+
+    margin-left: -7px !important;
+
+    flex-shrink: 0 !important;
+  }
+
+  .avatar:first-child {
+    margin-left: 0 !important;
+  }
+
+  .add-user {
+    width: 38px !important;
+    height: 38px !important;
+
+    margin-left: -3px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .users-text {
+    margin-top: 9px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 5px !important;
+  }
+
+
+  /* =====================================================
+     DO NOT HIDE ANALYTICS REPORTS
+  ===================================================== */
+
+  .hero > .analytics-reports {
+    display: block !important;
+
+    position: absolute !important;
+
+    width: 260px !important;
+    height: 395px !important;
+
+    top: 500px !important;
+    left: 50% !important;
+    right: auto !important;
+
+    margin: 0 !important;
+
+    transform: translateX(-50%) rotate(-6deg) !important;
+
+    z-index: 3 !important;
+  }
+
+
+  /* EMPLOYEES CARD - MOBILE PAR HIDE */
+  .hero > .employees-card {
+    display: none !important;
+  }
+
+
+  /* =====================================================
+     TEAM LIST
+  ===================================================== */
+
+  .team-list-card {
+    position: relative !important;
+
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+
+    transform: none !important;
+
+    width: calc(100% - 40px) !important;
+    max-width: 353px !important;
+
+    height: auto !important;
+    min-height: 260px !important;
+
+    margin: 25px auto 0 !important;
+    padding: 22px 20px !important;
+
+    box-sizing: border-box !important;
+
+    border-radius: 18px !important;
+
+    z-index: 2 !important;
+  }
+
+  .team-list-card h3 {
+    margin: 0 0 18px !important;
+
+    font-size: 22px !important;
+    line-height: 28px !important;
+  }
+
+  .team-member {
+    width: 100% !important;
+
+    min-height: 45px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    gap: 10px !important;
+  }
+
+  .member-info {
+    min-width: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 10px !important;
+  }
+
+  .member-info img {
+    width: 34px !important;
+    height: 34px !important;
+
+    flex-shrink: 0 !important;
+  }
+
+  .member-info span {
+    font-size: 13px !important;
+    line-height: 18px !important;
+
+    white-space: nowrap !important;
+  }
+
+  .department {
+    flex-shrink: 0 !important;
+
+    font-size: 10px !important;
+    line-height: 16px !important;
+
+    padding: 3px 8px !important;
+
+    border-radius: 6px !important;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media screen and (max-width: 380px) {
+
+  .hero {
+    height: 880px !important;
+    min-height: 880px !important;
+
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    padding-top: 100px !important;
+  }
+
+  .hero-content h1 {
+    font-size: 39px !important;
+    line-height: 43px !important;
+  }
+
+  .hero-content p {
+    font-size: 14px !important;
+    line-height: 22px !important;
+  }
+
+  .hero-primary-btn {
+    width: 140px !important;
+  }
+
+  .hero-secondary-btn {
+    width: 115px !important;
+  }
+}

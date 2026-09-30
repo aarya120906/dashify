@@ -1,0 +1,179 @@
+.built-for-you {
+  width: 100%;
+  height: 777px;
+  background: #fafbff;
+  box-sizing: border-box;
+  padding-top: 82px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.built-header {
+  text-align: center;
+}
+
+.built-header h2 {
+  margin: 0;
+  color: #080808;
+  font-size: 48px;
+  line-height: 58px;
+  font-weight: 500;
+  letter-spacing: -2.2px;
+}
+
+.built-header p {
+  margin: 20px 0 0;
+  color: #555555;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 400;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.feature-cards {
+  width: 1064px;
+  margin: 54px auto 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.feature-card {
+  position: relative;
+
+  width: 100%;
+  height: 435px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #e4e8f5;
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  background-color: #f9faff;
+
+  /* subtle Figma-like grid */
+  background-image:
+    linear-gradient(
+      rgba(218, 224, 242, 0.45) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(218, 224, 242, 0.45) 1px,
+      transparent 1px
+    );
+
+  background-size: 53px 53px;
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.feature-icon {
+  position: absolute;
+
+  left: 39px;
+  top: 39px;
+
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border-radius: 15px;
+
+  box-shadow: 0 1px 2px rgba(30, 40, 80, 0.02);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.feature-content {
+  position: absolute;
+
+  left: 39px;
+  right: 25px;
+  bottom: 39px;
+}
+
+.feature-content h3 {
+  margin: 0 0 13px;
+
+  color: #090909;
+
+  font-size: 25px;
+  line-height: 30px;
+
+  font-weight: 500;
+
+  letter-spacing: -1px;
+}
+
+.feature-content p {
+  margin: 0;
+
+  color: #565656;
+
+  font-size: 18px;
+  line-height: 29px;
+
+  font-weight: 400;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+  .feature-cards {
+    width: calc(100% - 80px);
+  }
+}
+
+@media (max-width: 800px) {
+  .built-for-you {
+    height: auto;
+    padding: 70px 20px;
+  }
+
+  .built-header h2 {
+    font-size: 38px;
+    line-height: 46px;
+  }
+
+  .built-header p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .built-header p br {
+    display: none;
+  }
+
+  .feature-cards {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    height: 400px;
+  }
+}
